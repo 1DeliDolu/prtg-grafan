@@ -5,17 +5,18 @@
   "id": "grafan-prtg-datasource",
   "metrics": true,
   "info": {
-    "description": "",
+    "description": "PRTG Network Monitor data source for Grafana",
     "author": {
       "name": "Grafan"
     },
-    "keywords": ["datasource"],
+    "keywords": [
+      "datasource",
+      "prtg",
+      "monitoring"
+    ],
     "logos": {
       "small": "img/logo.svg",
       "large": "img/logo.svg"
-    },
-    "routes": {
-      "config": "partials/config.html"
     },
     "links": [],
     "screenshots": [],
@@ -25,5 +26,27 @@
   "dependencies": {
     "grafanaDependency": ">=10.4.0",
     "plugins": []
-  }
+  },
+  "routes": [
+    {
+      "path": "api",
+      "url": "https://{{ .JsonData.url }}",
+      "urlParams": [
+        {
+          "name": "apitoken",
+          "content": "{{ .SecureJsonData.apiToken }}"
+        }
+      ],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "content": "application/json"
+        },
+        {
+          "name": "Accept",
+          "content": "application/json"
+        }
+      ]
+    }
+  ]
 }

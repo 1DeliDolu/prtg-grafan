@@ -9,7 +9,7 @@ datasources:
     version: 1
     editable: true
     jsonData:
-      path: 'prtg1.marburg.lan'
+      path: prtg1.marburg.lan
       cache: 1000
     secureJsonData:
-      apiKey: 'IFRD62C4C3GZF627ALICKIOVNYZMPOE4RMLQSIQOHY======'
+      apiKey: your-api-key

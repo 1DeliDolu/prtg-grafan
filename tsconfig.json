@@ -1,3 +1,18 @@
 {
-  "extends": "./.config/tsconfig.json"
+  "extends": "./node_modules/@grafana/toolkit/src/config/tsconfig.plugin.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "declaration": true,
+    "moduleResolution": "node",
+    "jsx": "react",
+    "baseUrl": "./src"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }
