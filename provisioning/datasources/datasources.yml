@@ -1,0 +1,15 @@
+apiVersion: 1
+
+datasources:
+  - name: 'prtg'
+    type: 'grafan-prtg-datasource'
+    access: proxy
+    isDefault: false
+    orgId: 1
+    version: 1
+    editable: true
+    jsonData:
+      path: 'prtg1.marburg.lan'
+      cache: 1000
+    secureJsonData:
+      apiKey: 'IFRD62C4C3GZF627ALICKIOVNYZMPOE4RMLQSIQOHY======'
